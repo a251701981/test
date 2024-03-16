@@ -3,17 +3,7 @@ on:
   push:
     branches: [ main ]
 jobs:
-  container-test-job:
-    runs-on: ubuntu-latest
-    container:
-      image: node:18
-      env:
-        NODE_ENV: development
-      ports:
-        - 80
-      volumes:
-        - my_docker_volume:/volume_mount
-      options: --cpus 1
+  default:
     steps:
-      - name: Check for dockerenv file
-        run: (ls /.dockerenv && echo Found dockerenv) || (echo No dockerenv)
+      - name: "xxx"
+        run: (echo "hello world!" && ls / -alh)
