@@ -4,6 +4,7 @@ on:
     branches: [ main ]
 jobs:
   default:
+    runs-on: ubuntu-latest
     steps:
       - name: "xxx"
         run: (echo "hello world!" && ls / -alh)
